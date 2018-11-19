@@ -9,43 +9,55 @@
 
 			<div class="boxleftformulario">
 				<h2>Faça sua consulta</h2>
-				<h3></h3>
+				<?php echo @Get_msg(); ?>
 				
 				<?php echo form_open(); ?>
 					<div class="group">      
-	      				<?php echo form_input('nome', '', array('required' => '')); ?>
+	      				<?php echo form_input('user_nome', set_value('user_nome'), array('required' => '')); ?>
 	      				<span class="bar"></span>
 	      				<label>Nome Completo</label>
     				</div>
     				<div class="group">      
-	      				<?php echo form_input('telefone', '', array('required' => '')); ?>
+	      				<?php echo form_input('user_telefone', set_value('user_telefone'), array('required' => '')); ?>
 	      				<span class="bar"></span>
 	      				<label>Whatsapp ou Telefone</label>
     				</div>
     				<div class="group">      
-	      				<?php echo form_input('bairro', '', array('required' => '')); ?>
+	      				<?php echo form_input('user_bairro', set_value('user_bairro'), array('required' => '')); ?>
 	      				<span class="bar"></span>
 	      				<label>Bairro</label>
     				</div>
     				<div class="group">      
-	      				<?php echo form_input('rua', '', array('required' => '')); ?>
+	      				<?php echo form_input('user_rua', set_value('user_rua'), array('required' => '')); ?>
 	      				<span class="bar"></span>
 	      				<label>Rua</label>
     				</div>
     				<div class="group">      
-	      				<?php echo form_input('numero', '', array('required' => '')); ?>
+	      				<?php echo form_input('user_numero', set_value('user_numero'), array('required' => '')); ?>
 	      				<span class="bar"></span>
-	      				<label>Número</label>
+	      				<label>Número da Casa</label>
     				</div>
     				<div class="group">      
-	      				<?php echo form_input(array('type' => 'date', 'name' => 'nascimento'), ''); ?>
+	      				<?php echo form_input(array('type' => 'date', 'name' => 'user_nascimento'), set_value('user_nascimento')); ?>
 	      				<span class="bar"></span>
 	      				<label>Data de nascimento</label>
     				</div>
     				<div class="row form-group">
 						<div class="col-md-12">
-							<select class="form-control select-cidades" value="" name="cidade">
-								<option value=""></option>
+							<select class="form-control select-cidades" value="Selecione uma cidade" name="user_cidade">
+								<?php 
+								if(set_value('user_cidade') == '')
+								{
+									echo '<option value="">Selecione uma cidade</option>';
+								}
+								else
+								{
+									echo '<option value="'.set_value('user_cidade').'">'.set_value('user_cidade').'</option>';
+								}
+								?>
+								<?php foreach($cidades as $nome): ?>
+								<?php echo '<option value="'.$nome.'">'.$nome.'</option>';  ?>
+								<?php endforeach; ?>
 							</select>
 						</div>
 					</div>

@@ -1,4 +1,4 @@
--<?php $this->load->view('head'); ?>
+<?php $this->load->view('head'); ?>
     
 <body>
     <div class="gtco-loader"></div>

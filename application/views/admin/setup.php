@@ -13,7 +13,7 @@
                             <a href="#">
                                 <img src="<?php echo base_url('assets/admin/'); ?>images/icon/logo.png" alt="CoolAdmin">
                             </a>
-                        </div>a
+                        </div>
                         <?php
                             if($msg = get_msg())
                             {

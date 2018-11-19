@@ -1,178 +1,67 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+-<?php $this->load->view('head'); ?>
+    
+<body>
+    <div class="gtco-loader"></div>
+    <div id="page">
+    <div class="page-inner">
+    
+    <?php $this->load->view('nav'); ?>
+    
+    <header id="gtco-header" class="gtco-cover" role="banner" style="background-image: url(<?php echo base_url('assets/images/') ?>family-watching.jpg)">
+        <div class="overlay"></div>
+        <div class="gtco-container">
+            <div class="row">
+                <div class="col-md-12 col-md-offset-0 text-left">
+                    <div class="row row-mt-15em">
+                        <div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
+                            <span style="margin: -45px 0 20px 0px" class="intro-text-small">Bem vindo à ConectaX</span>
+                            <h1 style="margin: -10px 0">Os melhores planos de Internet e TV do Brasil.</h1> 
+                        </div>
+                        
+                        <div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
+                            <div class="form-wrap">
+                                <div class="tab">
+                                    <ul class="tab-menu">
+                                        <li class="active gtco-first"><a href="#" data-tab="signup">Faça sua consulta</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-content-inner active" data-content="signup">
+                                            <form action="<?php echo base_url('produto'); ?>" method="get">
+                                                <div class="row form-group">
+                                                    <div class="col-md-12">
+                                                        <label for="username">Nome Completo</label>
+                                                        <input type="text" class="form-control" name="nome" required>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col-md-12">
+                                                        <label for="password2">Whatsapp ou Telefone</label>
+                                                        <input type="number" class="form-control" name="whatsapp" required>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col-md-12">
+                                                        <label for="password">Cidade</label>
+                                                        <select class="form-control form-control-lg" name="cidade" required>
+                                                        <option value="0">Seleciona a cidade...</option>
+                                                        <?php
+                                                            /*$cidades = new Cidades;
+                                                            $cidades->setEstado('MG');
+                                                            foreach ($cidades->getCidades() as $cidade):
 
-<?php $this->load->view('admin/head'); ?>
+                                                            endforeach;
+                                                            */
+                                                        ?>
+                                                        </select>
+                                                    </div>
+                                                </div>
 
-<body class="animsition">
-    <div class="page-wrapper">
-
-    <?php $this->load->view('admin/header'); ?>
-        <!-- PAGE CONTAINER-->
-        <div class="page-container2">
-            <!-- HEADER DESKTOP-->
-            <header class="header-desktop">
-                <div class="section__content section__content--p30">
-                    <div class="container-fluid">
-                        <div class="header-wrap">
-                            <form class="form-header" action="" method="POST">
-                                <input class="au-input au-input--xl" type="text" name="search" placeholder="Search for datas &amp; reports..." />
-                                <button class="au-btn--submit" type="submit">
-                                    <i class="zmdi zmdi-search"></i>
-                                </button>
-                            </form>
-                            <div class="header-button">
-                                <div class="noti-wrap">
-                                    <div class="noti__item js-item-menu">
-                                        <i class="zmdi zmdi-comment-more"></i>
-                                        <span class="quantity">1</span>
-                                        <div class="mess-dropdown js-dropdown">
-                                            <div class="mess__title">
-                                                <p>You have 2 news message</p>
-                                            </div>
-                                            <div class="mess__item">
-                                                <div class="image img-cir img-40">
-                                                    <img src="<?php echo base_url('assets/admin/') ?>images/icon/avatar-06.jpg" alt="Michelle Moreno" />
+                                                <div class="row form-group">
+                                                    <div class="col-md-12">
+                                                        <input type="submit" class="btn btn-primary consultar-formulario-home" value="Consultar">
+                                                    </div>
                                                 </div>
-                                                <div class="content">
-                                                    <h6>Michelle Moreno</h6>
-                                                    <p>Have sent a photo</p>
-                                                    <span class="time">3 min ago</span>
-                                                </div>
-                                            </div>
-                                            <div class="mess__item">
-                                                <div class="image img-cir img-40">
-                                                    <img src="<?php echo base_url('assets/admin/') ?>images/icon/avatar-04.jpg" alt="Diane Myers" />
-                                                </div>
-                                                <div class="content">
-                                                    <h6>Diane Myers</h6>
-                                                    <p>You are now connected on message</p>
-                                                    <span class="time">Yesterday</span>
-                                                </div>
-                                            </div>
-                                            <div class="mess__footer">
-                                                <a href="#">View all messages</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="noti__item js-item-menu">
-                                        <i class="zmdi zmdi-email"></i>
-                                        <span class="quantity">1</span>
-                                        <div class="email-dropdown js-dropdown">
-                                            <div class="email__title">
-                                                <p>You have 3 New Emails</p>
-                                            </div>
-                                            <div class="email__item">
-                                                <div class="image img-cir img-40">
-                                                    <img src="<?php echo base_url('assets/admin/') ?>images/icon/avatar-06.jpg" alt="Cynthia Harvey" />
-                                                </div>
-                                                <div class="content">
-                                                    <p>Meeting about new dashboard...</p>
-                                                    <span>Cynthia Harvey, 3 min ago</span>
-                                                </div>
-                                            </div>
-                                            <div class="email__item">
-                                                <div class="image img-cir img-40">
-                                                    <img src="<?php echo base_url('assets/admin/') ?>images/icon/avatar-05.jpg" alt="Cynthia Harvey" />
-                                                </div>
-                                                <div class="content">
-                                                    <p>Meeting about new dashboard...</p>
-                                                    <span>Cynthia Harvey, Yesterday</span>
-                                                </div>
-                                            </div>
-                                            <div class="email__item">
-                                                <div class="image img-cir img-40">
-                                                    <img src="<?php echo base_url('assets/admin/') ?>images/icon/avatar-04.jpg" alt="Cynthia Harvey" />
-                                                </div>
-                                                <div class="content">
-                                                    <p>Meeting about new dashboard...</p>
-                                                    <span>Cynthia Harvey, April 12,,2018</span>
-                                                </div>
-                                            </div>
-                                            <div class="email__footer">
-                                                <a href="#">See all emails</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="noti__item js-item-menu">
-                                        <i class="zmdi zmdi-notifications"></i>
-                                        <span class="quantity">3</span>
-                                        <div class="notifi-dropdown js-dropdown">
-                                            <div class="notifi__title">
-                                                <p>You have 3 Notifications</p>
-                                            </div>
-                                            <div class="notifi__item">
-                                                <div class="bg-c1 img-cir img-40">
-                                                    <i class="zmdi zmdi-email-open"></i>
-                                                </div>
-                                                <div class="content">
-                                                    <p>You got a email notification</p>
-                                                    <span class="date">April 12, 2018 06:50</span>
-                                                </div>
-                                            </div>
-                                            <div class="notifi__item">
-                                                <div class="bg-c2 img-cir img-40">
-                                                    <i class="zmdi zmdi-account-box"></i>
-                                                </div>
-                                                <div class="content">
-                                                    <p>Your account has been blocked</p>
-                                                    <span class="date">April 12, 2018 06:50</span>
-                                                </div>
-                                            </div>
-                                            <div class="notifi__item">
-                                                <div class="bg-c3 img-cir img-40">
-                                                    <i class="zmdi zmdi-file-text"></i>
-                                                </div>
-                                                <div class="content">
-                                                    <p>You got a new file</p>
-                                                    <span class="date">April 12, 2018 06:50</span>
-                                                </div>
-                                            </div>
-                                            <div class="notifi__footer">
-                                                <a href="#">All notifications</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="account-wrap">
-                                    <div class="account-item clearfix js-item-menu">
-                                        <div class="image">
-                                            <img src="<?php echo base_url('assets/admin/') ?>images/icon/avatar-01.jpg" alt="John Doe" />
-                                        </div>
-                                        <div class="content">
-                                            <a class="js-acc-btn" href="#">john doe</a>
-                                        </div>
-                                        <div class="account-dropdown js-dropdown">
-                                            <div class="info clearfix">
-                                                <div class="image">
-                                                    <a href="#">
-                                                        <img src="<?php echo base_url('assets/admin/') ?>images/icon/avatar-01.jpg" alt="John Doe" />
-                                                    </a>
-                                                </div>
-                                                <div class="content">
-                                                    <h5 class="name">
-                                                        <a href="#">john doe</a>
-                                                    </h5>
-                                                    <span class="email">johndoe@example.com</span>
-                                                </div>
-                                            </div>
-                                            <div class="account-dropdown__body">
-                                                <div class="account-dropdown__item">
-                                                    <a href="#">
-                                                        <i class="zmdi zmdi-account"></i>Account</a>
-                                                </div>
-                                                <div class="account-dropdown__item">
-                                                    <a href="#">
-                                                        <i class="zmdi zmdi-settings"></i>Setting</a>
-                                                </div>
-                                                <div class="account-dropdown__item">
-                                                    <a href="#">
-                                                        <i class="zmdi zmdi-money-box"></i>Billing</a>
-                                                </div>
-                                            </div>
-                                            <div class="account-dropdown__footer">
-                                                <a href="#">
-                                                    <i class="zmdi zmdi-power"></i>Logout</a>
-                                            </div>
+                                            </form> 
                                         </div>
                                     </div>
                                 </div>
@@ -180,262 +69,256 @@
                         </div>
                     </div>
                 </div>
-            </header>
-            <!-- HEADER DESKTOP-->
+            </div>
+        </div>
+    </header>
 
-            <!-- BREADCRUMB-->
-            <section class="au-breadcrumb m-t-75">
-                <div class="section__content section__content--p30">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="au-breadcrumb-content">
-                                    <div class="au-breadcrumb-left">
-                                        <span class="au-breadcrumb-span">You are here:</span>
-                                        <ul class="list-unstyled list-inline au-breadcrumb__list">
-                                            <li class="list-inline-item active">
-                                                <a href="#">Home</a>
-                                            </li>
-                                            <li class="list-inline-item seprate">
-                                                <span>/</span>
-                                            </li>
-                                            <li class="list-inline-item">Dashboard</li>
-                                        </ul>
-                                    </div>
-                                    <button class="au-btn au-btn-icon au-btn--green">
-                                        <i class="zmdi zmdi-plus"></i>add item</button>
-                                </div>
-                            </div>
+    <div class="gtco-section border-bottom">
+        <div class="gtco-container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+                    <h2>Conheça as modalidades de planos</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <a href="<?php echo base_url('assets/images/img_2.jpg') ?>') ?>" class="fh5co-project-item image-popup">
+                        <figure>
+                            <div class="overlay"><i class="ti-plus"></i></div>
+                            <img src="<?php echo base_url('assets/images/internet.jpeg') ?>" alt="Image" class="img-responsive">
+                        </figure>
+                        <div class="fh5co-text">
+                            <h2>OI TOTAL PLAY</h2>
+                            <p>Internet de alta velocidade e milhares de filmes e séries com o Coleção OI</p>
                         </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <a href="<?php echo base_url('assets/images/img_3.jpg') ?>" class="fh5co-project-item image-popup">
+                        <figure>
+                            <div class="overlay"><i class="ti-plus"></i></div>
+                            <img src="<?php echo base_url('assets/images/tv.jpg') ?>" alt="Image" class="img-responsive">
+                        </figure>
+                        <div class="fh5co-text">
+                            <h2>OI TV RESIDENCIAL</h2>
+                            <p>Diversos canais de filmes e séries para se divertir com a familia</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <a href="<?php echo base_url('assets/images/img_4.jpg') ?>" class="fh5co-project-item image-popup">
+                        <figure>
+                            <div class="overlay"><i class="ti-plus"></i></div>
+                            <img src="<?php echo base_url('assets/images/celular.jpg') ?>" alt="Image" class="img-responsive">
+                        </figure>
+                        <div class="fh5co-text">
+                            <h2>OI TOTAL CONECTADO</h2>
+                            <p>Internet dentro e fora de casa com ligações ilimitadas para todo o Brasil</p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="gtco-section border-bottom">
+        <div class="gtco-container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+                    <h2>Oi Total Play</h2>
+                    <p>Internet de alta velocidade e milhares de filmes e séries com o Coleção OI</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="price-box animate-box">
+                        <h2 class="pricing-plan">Total Play</h2>
+                        <div class="price">R$ 119,90<small>/mês</small></div>
+                        <p></p>
+                        <ul class="pricing-info">
+                            <li><div class="pricing-info-icon"><img width="26" src="<?php echo base_url('assets/images/icons/banda-larga.svg') ?>"></div>Internet 15 MB</li>
+                            <li><div class="pricing-info-icon"><img width="32" src="<?php echo base_url('assets/images/icons/fixo.svg') ?>"></div>Telefone Fixo Ilimitado</li>
+                            <li><div class="pricing-info-icon"><img width="26" src="<?php echo base_url('assets/images/icons/internet-celular.svg') ?>"></div>OI WIFI Fora de casa</li>
+                            <li><div class="pricing-info-icon"><img width="34" src="<?php echo base_url('assets/images/icons/icon-oiplay.svg') ?>"></div>+ de 20 mil títulos</li>
+                            
+                            <li style="margin: 0 auto; text-align: center;">
+                                <img style="width: 100px; padding-top: 10px;" src="<?php echo base_url('assets/images/icons/logo-colecao-oi-oi-play.png') ?>">
+                            </li>
+                        </ul>
+                        <a href="produto.php" class="btn btn-primary btn-sm">Consultar</a>
+                        <hr>
+                        <a href="totalplay.php">Veja os planos</a>
                     </div>
                 </div>
-            </section>
-            <!-- END BREADCRUMB-->
-
-                        <!-- DATA TABLE-->
-            <section class="p-t-20">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h3 class="title-5 m-b-35">data table</h3>
-                            <div class="table-data__tool">
-                                <div class="table-data__tool-left">
-                                    <div class="rs-select2--light rs-select2--md">
-                                        <select class="js-select2" name="property">
-                                            <option selected="selected">All Properties</option>
-                                            <option value="">Option 1</option>
-                                            <option value="">Option 2</option>
-                                        </select>
-                                        <div class="dropDownSelect2"></div>
-                                    </div>
-                                    <div class="rs-select2--light rs-select2--sm">
-                                        <select class="js-select2" name="time">
-                                            <option selected="selected">Today</option>
-                                            <option value="">3 Days</option>
-                                            <option value="">1 Week</option>
-                                        </select>
-                                        <div class="dropDownSelect2"></div>
-                                    </div>
-                                    <button class="au-btn-filter">
-                                        <i class="zmdi zmdi-filter-list"></i>filters</button>
-                                </div>
-                                <div class="table-data__tool-right">
-                                    <button class="au-btn au-btn-icon au-btn--green au-btn--small">
-                                        <i class="zmdi zmdi-plus"></i>add item</button>
-                                    <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
-                                        <select class="js-select2" name="type">
-                                            <option selected="selected">Export</option>
-                                            <option value="">Option 1</option>
-                                            <option value="">Option 2</option>
-                                        </select>
-                                        <div class="dropDownSelect2"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="table-responsive table-responsive-data2">
-                                <table class="table table-data2">
-                                    <thead>
-                                        <tr>
-                                            <th>
-                                                <label class="au-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="au-checkmark"></span>
-                                                </label>
-                                            </th>
-                                            <th>name</th>
-                                            <th>email</th>
-                                            <th>description</th>
-                                            <th>date</th>
-                                            <th>status</th>
-                                            <th>price</th>
-                                            <th></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="tr-shadow">
-                                            <td>
-                                                <label class="au-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="au-checkmark"></span>
-                                                </label>
-                                            </td>
-                                            <td>Lori Lynch</td>
-                                            <td>
-                                                <span class="block-email">lori@example.com</span>
-                                            </td>
-                                            <td class="desc">Samsung S8 Black</td>
-                                            <td>2018-09-27 02:12</td>
-                                            <td>
-                                                <span class="status--process">Processed</span>
-                                            </td>
-                                            <td>$679.00</td>
-                                            <td>
-                                                <div class="table-data-feature">
-                                                    <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
-                                                        <i class="zmdi zmdi-mail-send"></i>
-                                                    </button>
-                                                    <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                        <i class="zmdi zmdi-edit"></i>
-                                                    </button>
-                                                    <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                        <i class="zmdi zmdi-delete"></i>
-                                                    </button>
-                                                    <button class="item" data-toggle="tooltip" data-placement="top" title="More">
-                                                        <i class="zmdi zmdi-more"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr class="spacer"></tr>
-                                        <tr class="tr-shadow">
-                                            <td>
-                                                <label class="au-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="au-checkmark"></span>
-                                                </label>
-                                            </td>
-                                            <td>Lori Lynch</td>
-                                            <td>
-                                                <span class="block-email">john@example.com</span>
-                                            </td>
-                                            <td class="desc">iPhone X 64Gb Grey</td>
-                                            <td>2018-09-29 05:57</td>
-                                            <td>
-                                                <span class="status--process">Processed</span>
-                                            </td>
-                                            <td>$999.00</td>
-                                            <td>
-                                                <div class="table-data-feature">
-                                                    <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
-                                                        <i class="zmdi zmdi-mail-send"></i>
-                                                    </button>
-                                                    <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                        <i class="zmdi zmdi-edit"></i>
-                                                    </button>
-                                                    <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                        <i class="zmdi zmdi-delete"></i>
-                                                    </button>
-                                                    <button class="item" data-toggle="tooltip" data-placement="top" title="More">
-                                                        <i class="zmdi zmdi-more"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr class="spacer"></tr>
-                                        <tr class="tr-shadow">
-                                            <td>
-                                                <label class="au-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="au-checkmark"></span>
-                                                </label>
-                                            </td>
-                                            <td>Lori Lynch</td>
-                                            <td>
-                                                <span class="block-email">lyn@example.com</span>
-                                            </td>
-                                            <td class="desc">iPhone X 256Gb Black</td>
-                                            <td>2018-09-25 19:03</td>
-                                            <td>
-                                                <span class="status--denied">Denied</span>
-                                            </td>
-                                            <td>$1199.00</td>
-                                            <td>
-                                                <div class="table-data-feature">
-                                                    <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
-                                                        <i class="zmdi zmdi-mail-send"></i>
-                                                    </button>
-                                                    <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                        <i class="zmdi zmdi-edit"></i>
-                                                    </button>
-                                                    <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                        <i class="zmdi zmdi-delete"></i>
-                                                    </button>
-                                                    <button class="item" data-toggle="tooltip" data-placement="top" title="More">
-                                                        <i class="zmdi zmdi-more"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr class="spacer"></tr>
-                                        <tr class="tr-shadow">
-                                            <td>
-                                                <label class="au-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="au-checkmark"></span>
-                                                </label>
-                                            </td>
-                                            <td>Lori Lynch</td>
-                                            <td>
-                                                <span class="block-email">doe@example.com</span>
-                                            </td>
-                                            <td class="desc">Camera C430W 4k</td>
-                                            <td>2018-09-24 19:10</td>
-                                            <td>
-                                                <span class="status--process">Processed</span>
-                                            </td>
-                                            <td>$699.00</td>
-                                            <td>
-                                                <div class="table-data-feature">
-                                                    <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
-                                                        <i class="zmdi zmdi-mail-send"></i>
-                                                    </button>
-                                                    <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                        <i class="zmdi zmdi-edit"></i>
-                                                    </button>
-                                                    <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                        <i class="zmdi zmdi-delete"></i>
-                                                    </button>
-                                                    <button class="item" data-toggle="tooltip" data-placement="top" title="More">
-                                                        <i class="zmdi zmdi-more"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                <div class="col-md-4">
+                    <div class="price-box popular animate-box">
+                        <div class="popular-text">Popular</div>
+                        <h2 class="pricing-plan">Total Residencial</h2>
+                        <div class="price">R$ 204,90<small>/mês</small></div>
+                        <p></p>
+                        <ul class="pricing-info">
+                            <li><div class="pricing-info-icon"><img width="30" src="<?php echo base_url('assets/images/icons/tv.svg') ?>"></div>168 canais 56 em HD</li>
+                            <li><div class="pricing-info-icon"><img width="26" src="<?php echo base_url('assets/images/icons/banda-larga.svg') ?>"></div>Internet 15 MB</li>
+                            <li><div class="pricing-info-icon"><img width="32" src="<?php echo base_url('assets/images/icons/fixo.svg') ?>"></div>Telefone Fixo Ilimitado</li>
+                            <li><div class="pricing-info-icon"><img width="26" src="<?php echo base_url('assets/images/icons/internet-celular.svg') ?>"></div>OI WIFI Fora de casa</li>
+                            <li><div class="pricing-info-icon"><img width="30" src="<?php echo base_url('assets/images/icons/tv.svg') ?>"></div>1 ponto adicional prátis</li>
+                        </ul>
+                        <a href="produto.php?plano=oiresidencialintermediario" class="btn btn-primary btn-sm">Consultar</a>
+                        <hr>
+                        <a href="totalresidencial.php">Veja os planos</a>
                     </div>
                 </div>
-            </section>
-            <!-- END DATA TABLE-->
+                <div class="col-md-4">
+                    <div class="price-box animate-box">
+                        <h2 class="pricing-plan">Conectado Light</h2>
+                        <div class="price">R$ 164,90<small>/mês </small></div>
+                        <p></p>
+                        <ul class="pricing-info">
+                            <li><div class="pricing-info-icon"><img width="26" src="<?php echo base_url('assets/images/icons/banda-larga.svg') ?>"></div>Internet 15 MB</li>
+                            <li><div class="pricing-info-icon"><img width="24" src="<?php echo base_url('assets/images/icons/internet-celular.svg') ?>"></div>Ligações Ilimitadas no Celular</li>
+                            <li><div class="pricing-info-icon"><img width="24" src="<?php echo base_url('assets/images/icons/internet-celular.svg') ?>"></div>8gb Internet Celular</li>
+                            <li><div class="pricing-info-icon"><img width="30" src="<?php echo base_url('assets/images/icons/icon-oiplay.svg') ?>"></div>+ de 20 mil títulos</li>
 
-            <section>
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="copyright">
-                                <p>Copyright © 2018 Colorlib. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
-                            </div>
-                        </div>
+                            <li style="margin: 0 auto; text-align: center;">
+                                <img style="width: 100px; padding-top: 10px;" src="<?php echo base_url('assets/images/icons/logo-colecao-oi-oi-play.png') ?>">
+                            </li>
+                        </ul>
+                        <a href="produto.php" class="btn btn-primary btn-sm">Consultar</a>
                     </div>
                 </div>
-            </section>
-            <!-- END PAGE CONTAINER-->
+            </div>
         </div>
     </div>
 
-</body>
-<?php $this->load->view('admin/js'); ?>
+    <div class="gtco-section">
+        <div class="gtco-container">
+            <div class="row">
+                <div class="col-md-12 col-md-offset-0">
+                    <ul class="fh5co-faq-list">
+                        <li class="animate-box">
+                            <h2 style="font-weight: 700; font-size: 35px; max-width: 450px">Oi Play: O melhor da TV quando você quiser</h2>
+                            <div class="oiplay">
+                                <div class="icons-oiplay">
+                                    <p>Além de todos os canais da sua Oi TV HD, a família toda pode assistir online a milhares de filmes, séries, desenhos, esportes e muito mais. E dá pra curtir tudo isso quando quiser, com total conforto, pelo computador, tablet ou celular. Você também pode aproveitar o Oi Play direto na sua TV.</p>
+                                    <img src="<?php echo base_url('assets/images/icons/hbo-go.png') ?>">
+                                    <img src="<?php echo base_url('assets/images/icons/logo-colecao-oi-oi-play.png') ?>">
+                                    <img src="<?php echo base_url('assets/images/icons/crackle.png') ?>">
+                                    <img src="<?php echo base_url('assets/images/icons/espn.png') ?>">
+                                    <img src="<?php echo base_url('assets/images/icons/noggin.png') ?>">
+                                    <img src="<?php echo base_url('assets/images/icons/discovery-kids.png') ?>">
+                                    <img src="<?php echo base_url('assets/images/icons/fox-app-traco.png') ?>">
+                                </div>
+
+                                <div style="max-width: 450px; margin: 0 40px">
+                                    <img style="width: 100%" src="<?php echo base_url('assets/images/oi-play_TV.png') ?>">
+                                </div>
+                            </div>
+                        </li>
+
+                        <div class="row" style="border-top: 3px solid #f1f1f1; padding: 30px 0">
+                            <div class="col-sm-4">
+                                <li class="animate-box">
+                                <h2>Vai incluso</h2>
+                                </li>
+                            </div>
+                            
+                            <div class="col-sm-8">
+                                <li class="animate-box">
+                                    <h2>Modem WiFi: dentro de casa</h2>
+                                    <p>1 modem de internet WiFi cedido em regime de comodato. Perfeito para conectar seus aparelhos dentro de casa: computadores, tablets, celulares, Vs, videogames e mais</p>
+                                </li>
+                                <li class="animate-box">
+                                    <h2>Oi WiFi: fora de casa</h2>
+                                    <p>Mais de 2 milhões de pontos de internet pelo Brasil pra você navegar fora de casa em aeroportos, restaurantes e em muitos outros locais.</p>
+                                </li>
+                            </div>
+                        </div>
+
+                        <div class="row" style="border-top: 3px solid #f1f1f1; padding: 30px 0">
+                            <div class="col-sm-4">
+                                <li class="animate-box">
+                                        <h2>Você pode adicionar</h2>
+                                </li>
+                            </div>
+                            <div class="col-sm-8">
+                                <li class="animate-box">
+                                    <div class="row">
+                                        <div class="col-sm-8"><h2>Internet Banda Larga 25 Mega</h2></div>
+                                        <div class="col-sm-4"><h2>+10,00/mês</h2></div>
+                                    </div>
+                                </li>
+                                <li class="animate-box">
+                                    <div class="row">
+                                        <div class="col-sm-8"><h2>Internet Banda Larga 35 Mega</h2></div>
+                                        <div class="col-sm-4"><h2>+20,00/mês</h2></div>
+                                    </div>
+                                </li>
+                                <li class="animate-box">
+                                    <div class="row">
+                                        <div class="col-sm-8"><h2>Pontos adicionais pra TV*</h2></div>
+                                        <div class="col-sm-4"><h2>+24,90/mês</h2></div>
+                                    </div>
+                                </li>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gtco-features" class="border-bottom">
+        <div class="gtco-container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
+                    <h2>Veja algumas vantagens</h2>
+                    <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature-center animate-box" data-animate-effect="fadeIn">
+                        <span class="icon">
+                            <i class="ti-vector"></i>
+                        </span>
+                        <h3>OI PLAY</h3>
+                        <p>Filmes, séries e desenhos com total conforto, pelo computador, tablet ou celular. Você também pode aproveitar o Oi Play direto na sua TV</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature-center animate-box" data-animate-effect="fadeIn">
+                        <span class="icon">
+                            <i class="ti-tablet"></i>
+                        </span>
+                        <h3>OI WIFI</h3>
+                        <p>Mais de 2 milhões de pontos de internet pelo Brasil pra você navegar fora de casa em aeroportos, restaurantes e em muitos outros locais.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature-center animate-box" data-animate-effect="fadeIn">
+                        <span class="icon">
+                            <i class="ti-settings"></i>
+                        </span>
+                        <h3>MODEM WIFI GRÁTIS</h3>
+                        <p>1 modem de internet WiFi Grátis. Perfeito para conectar seus aparelhos dentro de casa: computadores, tablets, celulares, TVs e videogames</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature-center animate-box" data-animate-effect="fadeIn">
+                        <span class="icon">
+                            <i class="ti-ruler-pencil"></i>
+                        </span>
+                        <h3>INSTALAÇÃO RÁPIDA</h3>
+                        <p>Até 48 horas para instalar (dias úteis que contam a partir do agendamento). De segunda a sábado, das 8h às 20h.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <?php $this->load->view('footer'); ?>
+
+    </body>
 </html>
-<!-- end document-->

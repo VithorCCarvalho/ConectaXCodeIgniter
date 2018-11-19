@@ -1,48 +1,34 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title><?php echo $titulo; ?></title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="ConectaX Oi Planos de Internet e TV" />
-		<meta name="keywords" content="conectax, planos, internet, oi, operadoraoi, internet, tv, canais, fibra, otica, velox, celular, combos" />
-		<meta name="author" content="ConectaX OI"/>
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
 
+    <!-- Title Page-->
+    <title><?php echo @$titulo; ?></title>
 
-	  	<!-- Facebook and Twitter integration -->
-		<meta property="og:title" content=""/>
-		<meta property="og:image" content=""/>
-		<meta property="og:url" content=""/>
-		<meta property="og:site_name" content=""/>
-		<meta property="og:description" content=""/>
-		<meta name="twitter:title" content="" />
-		<meta name="twitter:image" content="" />
-		<meta name="twitter:url" content="" />
-		<meta name="twitter:card" content="" />
+    <!-- Fontfaces CSS-->
+    <link href="<?php echo base_url('assets/admin/'); ?>vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="<?php echo base_url('assets/admin/'); ?>vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="<?php echo base_url('assets/admin/'); ?>css/font-face.css" rel="stylesheet" media="all">
 
-		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
-		
-		<!-- Animate.css -->
-		<link rel="stylesheet" href="<?php echo base_url('assets/css/animate.css'); ?>">
-		<!-- Icomoon Icon Fonts-->
-		<link rel="stylesheet" href="<?php echo base_url('assets/css/icomoon.css'); ?>">
-		<!-- Themify Icons-->
-		<link rel="stylesheet" href="<?php echo base_url('assets/css/themify-icons.css'); ?>">
-		<!-- Bootstrap  -->
-		<link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.css'); ?>">
-		<!-- Magnific Popup -->
-		<link rel="stylesheet" href="<?php echo base_url('assets/css/magnific-popup.css'); ?>">
-		<!-- Owl Carousel  -->
-		<link rel="stylesheet" href="<?php echo base_url('assets/css/owl.carousel.min.css'); ?>">
-		<link rel="stylesheet" href="<?php echo base_url('assets/css/owl.theme.default.min.css'); ?>">
-		<!-- Theme style  -->
-		<link rel="stylesheet" href="<?php echo base_url('assets/css/style.css'); ?>">
-		<link rel="stylesheet" href="<?php echo base_url('assets/css/consulta.css'); ?>">
-		<!-- Modernizr JS -->
-		<script src="<?php echo base_url('assets/js/modernizr-2.6.2.min.js'); ?>"></script>
-		<!-- FOR IE9 below -->
-		<!--[if lt IE 9]>
-		<script src=" "></script>
-		<![endif]-->
-	</head>
+    <link href="<?php echo base_url('assets/admin/'); ?>vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="<?php echo base_url('assets/admin/'); ?>vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="<?php echo base_url('assets/admin/'); ?>vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="<?php echo base_url('assets/admin/'); ?>vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="<?php echo base_url('assets/admin/'); ?>vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="<?php echo base_url('assets/admin/'); ?>vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="<?php echo base_url('assets/admin/'); ?>vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="<?php echo base_url('assets/admin/'); ?>vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="<?php echo base_url('assets/admin/'); ?>vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="<?php echo base_url('assets/admin/'); ?>css/theme.css" rel="stylesheet" media="all">
+
+</head>

@@ -38,7 +38,6 @@
         <link rel="stylesheet" href="<?php echo base_url('assets/css/owl.theme.default.min.css'); ?>">
         <!-- Theme style  -->
         <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css'); ?>">
-        <link rel="stylesheet" href="<?php echo base_url('assets/css/consulta.css'); ?>">
         <!-- Modernizr JS -->
         <script src="<?php echo base_url('assets/js/modernizr-2.6.2.min.js'); ?>"></script>
         <!-- FOR IE9 below -->

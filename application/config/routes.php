@@ -60,5 +60,5 @@ $route['contato'] = 'main/contato';
 
 $route['page'] = 'main';
 $route['page/(:num)'] = 'main/page/$1';
-$route['login'] = 'setup/login';
-$route['painel'] = 'setup/login';
+$route['admin/login'] = 'login/login';
+$route['admin/alterar'] = 'setup/alterar';

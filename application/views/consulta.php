@@ -3,6 +3,8 @@
 
 <?php $this->load->view('head'); ?>
 
+<link rel="stylesheet" href="<?php echo base_url('assets/css/consulta.css'); ?>">
+
 <body>
 	<div class="contentconsulta">
 		<div class="boxleftconsulta">

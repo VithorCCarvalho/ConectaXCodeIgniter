@@ -10,7 +10,7 @@ class Admin extends CI_Controller {
 		$this->load->helper(array('css_html', 'functions'));
 		$this->load->model('Option_model', 'Option');
 
-		Verifica_Login();
+		Verifica_Login('admin/login');
 	}
 
 	public function index()
@@ -21,10 +21,4 @@ class Admin extends CI_Controller {
 
 		$this->load->view('admin/home', $dados);
 	}
-
-	public function login()
-	{
-		redirect('admin/login/', 'refresh');
-	}
-
 }

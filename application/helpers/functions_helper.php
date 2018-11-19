@@ -24,7 +24,7 @@ endif;
 
 if(!function_exists('Verifica_login')):
 	// Verifica se o usuario esta logado
-	function Verifica_login($redirect = 'login')
+	function Verifica_login($redirect = 'admin/login')
 	{
 		$ci = & get_instance();
 

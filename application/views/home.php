@@ -26,7 +26,7 @@
                                     </ul>
                                     <div class="tab-content">
                                         <div class="tab-content-inner active" data-content="signup">
-                                            <form action="<?php echo base_url('produto'); ?>" method="get">
+                                            <form action="<?php echo base_url('consulta'); ?>">
                                                 <div class="row form-group">
                                                     <div class="col-md-12">
                                                         <label for="username">Nome Completo</label>

@@ -1,5 +1,22 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+	defined('BASEPATH') OR exit('No direct script access allowed');
+
+	$route['default_controller'] = 'main';
+	$route['404_override'] = '';
+	$route['translate_uri_dashes'] = FALSE;
+
+	//Rotas personlizadas
+	$route['internet'] = 'Main/internet';
+	$route['tv'] = 'Main/tv';
+	$route['contato'] = 'Main/contato';
+
+	$route['page'] = 'main';
+	$route['page/(:num)'] = 'Main/page/$1';
+	$route['admin/login'] = 'Login/login';
+	$route['admin/alterar'] = 'Setup/alterar';
+
+	$route['consulta'] = 'RegisterCliente';
+	$route['consulta/finalizar'] = 'RegisterCliente/Finalizar';
 
 /*
 | -------------------------------------------------------------------------
@@ -49,16 +66,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'main';
-$route['404_override'] = '';
-$route['translate_uri_dashes'] = FALSE;
 
-//Rotas personlizadas
-$route['internet'] = 'main/internet';
-$route['tv'] = 'main/tv';
-$route['contato'] = 'main/contato';
-
-$route['page'] = 'main';
-$route['page/(:num)'] = 'main/page/$1';
-$route['admin/login'] = 'login/login';
-$route['admin/alterar'] = 'setup/alterar';

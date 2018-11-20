@@ -9,7 +9,7 @@
             <div class="login-wrap">
                 <div class="login-content">
                     <div>
-                        <h2 style="text-align: center;"><?php echo @$nome; ?></h2>
+                        <h2 style="text-align: center;">Configurações</h2>
                     </div>
                     <?php 
                         echo @get_msg();

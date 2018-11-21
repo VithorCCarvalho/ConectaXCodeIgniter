@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html>
+
 <?php $this->load->view('head'); ?>
     
 <body>
@@ -26,7 +29,7 @@
                                     </ul>
                                     <div class="tab-content">
                                         <div class="tab-content-inner active" data-content="signup">
-                                            <form action="<?php echo base_url('consulta'); ?>">
+                                            <form action="<?php echo base_url('consulta'); ?>" method="post">
                                                 <div class="row form-group">
                                                     <div class="col-md-12">
                                                         <label for="nome">Nome Completo</label>
@@ -43,16 +46,7 @@
                                                     <div class="col-md-12">
                                                         <label for="cidade">Cidade</label>
                                                         <select class="form-control select-cidades" value="Selecione uma cidade" name="user_cidade">
-                                                        <?php 
-                                                        if(@$_GET['cidade'] == '')
-                                                        {
-                                                            echo '<option value="">Selecione uma cidade</option>';
-                                                        }
-                                                        else
-                                                        {
-                                                            echo '<option value="'.@$_GET['cidade'].'">'.@$_GET['cidade'].'</option>';
-                                                        }
-                                                        ?>
+                                                        <option value="">Seleciona sua cidade</option>
                                                         <?php foreach($cidades as $nome): ?>
                                                         <?php echo '<option value="'.$nome.'">'.$nome.'</option>';  ?>
                                                         <?php endforeach; ?>

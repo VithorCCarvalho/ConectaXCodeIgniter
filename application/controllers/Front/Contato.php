@@ -7,7 +7,7 @@ class Contato extends CI_Controller
 	{
 		parent::__construct();
 
-		$this->load->helper(array('url', 'form', 'css_html'));
+		$this->load->helper(array('form', 'css_html'));
 		$this->load->library(array('form_validation', 'email'));
 	}
 

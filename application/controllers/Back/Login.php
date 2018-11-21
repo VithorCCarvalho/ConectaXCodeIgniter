@@ -21,7 +21,7 @@ class Login extends CI_Controller {
 
 		$dados['titulo'] = 'Login do Sistema';
 
-		$this->form_validation->set_rules('login', 'login', 'trim|required|alpha_numeric');
+		$this->form_validation->set_rules('email', 'e-mail', 'trim|required');
 		$this->form_validation->set_rules('senha', 'senha', 'trim|required');
 
 		if($this->form_validation->run() == FALSE)
@@ -35,15 +35,15 @@ class Login extends CI_Controller {
 		{
 			$dados_form = $this->input->post();
 
-			if($this->option->Get_option('user_login') == $dados_form['login'])
+			if($this->option->Get_option('user_email') == $dados_form['email'])
 			{
 				// Usuário existe
 				if(password_verify($dados_form['senha'], $this->option->Get_option('user_pass')))
 				{
 					$this->session->set_userdata('logged', TRUE);
-					$this->session->set_userdata('user_login', $dados_form['login']);
-					$this->session->set_userdata('user_nome', $this->option->Get_option('user_nome'));
-					$this->session->set_userdata('user_email', $this->option->Get_option('user_email'));
+					$this->session->set_userdata('admin_login', $dados_form['login']);
+					$this->session->set_userdata('admin_nome', $this->option->Get_option('user_nome'));
+					$this->session->set_userdata('admin_email', $this->option->Get_option('user_email'));
 
 					// Faz Redirect para a Home do Admin
 					// ---------------------------------
@@ -67,8 +67,9 @@ class Login extends CI_Controller {
 	public function logout()
 	{
 		$this->session->unset_userdata('logged');
-		$this->session->unset_userdata('user_login');
-		$this->session->unset_userdata('user_email');
+		$this->session->unset_userdata('admin_login');
+		$this->session->unset_userdata('admin_email');
+		$this->session->unset_userdata('admin_nome');
 
 		set_msg(alert_success('Logout realizado'));
 		redirect('admin/login');

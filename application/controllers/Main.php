@@ -6,14 +6,12 @@ class Main extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-
-		$this->load->helper('url');
 	}
 
 	public function index()
 	{
 		$dados['titulo'] = 'Home';
-		$this->load->model('Cidades_Model', 'Cidades');
+		$this->load->model(array('Cidades_Model'=>'Cidades'));
 
 		$dados['cidades'] = $this->Cidades->GetCidades('MG');
 

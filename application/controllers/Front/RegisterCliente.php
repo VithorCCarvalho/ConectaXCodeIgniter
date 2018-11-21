@@ -8,8 +8,9 @@ class RegisterCliente extends CI_Controller {
 		parent::__construct();
 
 		$this->load->helper(array('css_html', 'functions', 'form'));
-		$this->load->library('form_validation');
+		$this->load->library(array('form_validation', 'get_ip'));
 		$this->load->model(array('Cidades_Model' => 'Cidades', 'Clientes_Model' => 'Clientes'));
+
 	}
 
 	public function index()
@@ -36,11 +37,13 @@ class RegisterCliente extends CI_Controller {
 			else
 			{
 				$dados_form = $this->input->post();
-				$dados_form['ip_code'] = '0';
-				$dados_form['ip_city'] = '0';
-				$dados_form['ip_state'] = '0';
-				$dados_form['user_cpf'] = '0';
-				$dados_form['user_rg'] = '0';
+
+				$ip_info = $this->get_ip->get_ip_info($_SERVER['REMOTE_ADDR']);
+
+				$dados_form['ip_code'] = $ip_info['ip'];
+				$dados_form['ip_city'] = $ip_info['city'];
+				$dados_form['ip_state'] = $ip_info['region_name'];
+				$dados_form['status'] = 'À consultar';
 
 				$insert = $this->Clientes->InserirCliente($dados_form);
 

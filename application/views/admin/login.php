@@ -23,8 +23,8 @@
                         <div class="login-form">
                             <?php echo form_open('', 'post'); ?>
                                 <div class="form-group">
-                                    <?php echo form_label('Login'); ?>
-                                    <?php echo form_input('login', set_value('login'), array('class'=>'au-input au-input--full', 'placeholder'=>'Email')); ?>
+                                    <?php echo form_label('E-mail'); ?>
+                                    <?php echo form_input('email', set_value('email'), array('class'=>'au-input au-input--full', 'placeholder'=>'E-mail')); ?>
                                 </div>
                                 <div class="form-group">
                                     <?php echo form_label('Senha'); ?>

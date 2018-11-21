@@ -1285,7 +1285,6 @@ form label {
   outline: none !important;
 }
 .consultar-formulario-home {
-  border-radius: 0 !important;
   font-weight: 300;
   background: linear-gradient(to right, #da2977 0%, #ec5226 100%);
 }

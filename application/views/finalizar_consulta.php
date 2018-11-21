@@ -15,16 +15,17 @@
 				
 				<?php echo form_open(); ?>
 					<div class="group">      
+	      				<?php echo form_input('user_cpf', set_value('user_cpf'), array('required' => '')); ?>
+	      				<span class="bar"></span>
+	      				<label>CPF</label>
+	      				<p class="small">Suas informações estarão protegidas</p>
+    				</div>
+
+					<div class="group">      
 	      				<?php echo form_input('user_mae', set_value('user_mae'), array('required' => '')); ?>
 	      				<span class="bar"></span>
 	      				<label>Nome da Mãe</label>
     				</div>
-    				<div class="group">      
-	      				<?php echo form_input('user_cpf', set_value('user_cpf'), array('required' => '')); ?>
-	      				<span class="bar"></span>
-	      				<label>CPF</label>
-    				</div>
-
     				<input type="submit" value="Finalizar Consulta" class="btn btn-primary">
 			</div>
 			  		

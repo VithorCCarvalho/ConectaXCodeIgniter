@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html>
+
 <?php $this->load->view('head'); ?>
 	
 <body>

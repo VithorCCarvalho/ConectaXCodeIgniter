@@ -18,7 +18,7 @@
 							<li><a href="<?php echo base_url('tv') ?>">Total Residencial</a></li>
 						</ul>
 					</li>
-					<li><a href="<?php echo base_url('Contato/') ?>">Contato</a></li>
+					<li><a href="<?php echo base_url('contato/') ?>">Contato</a></li>
 					<li class="btn-cta"><a href="#"><span>Aderir</span></a></li>
 				</ul>
 			</div>

@@ -17,3 +17,4 @@
 
 	$route['consulta'] = 'Front/RegisterCliente';
 	$route['consulta/finalizar'] = 'Front/RegisterCliente/Finalizar';
+	$route['consulta/success'] = 'Front/RegisterCliente/Success';

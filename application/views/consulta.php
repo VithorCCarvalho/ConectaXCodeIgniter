@@ -72,7 +72,7 @@
 		<div class="boxrightconsulta">
 
 			<div class="box">
-				<h2>Plano</h2>
+				<h2>Algumas vantagens</h2>
 				<ul class="list-group">
 				  	<li class=""><span class="ti-check" style="margin: 0 10px"></span> Internet 15MB</li>
 				  	<li class=""><span class="ti-check" style="margin: 0 10px"></span> Coleção OI</li>

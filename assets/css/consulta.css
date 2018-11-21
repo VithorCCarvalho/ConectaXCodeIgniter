@@ -19,7 +19,7 @@ body {
 }
 .boxrightconsulta .box{
 	width: 500px;
-	margin: 0 auto;
+	margin-left: 7%;
 	display: block;
 	color: #fff;
 	letter-spacing: -1px;

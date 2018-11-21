@@ -100,11 +100,9 @@ class RegisterCliente extends CI_Controller {
 
 					// Destroi a função last user para impedir que a pagina seja acessada em um cadastro previo
 					$this->session->unset_userdata('last_user');
-					$this->session->unset_userdata('user_nome');
 					$this->session->unset_userdata('user_id');
 
-					Set_msg(alert_success('Cadastro realizado!'));
-					redirect('success');
+					redirect('consulta/success');
 				}
 			}
 
@@ -112,6 +110,19 @@ class RegisterCliente extends CI_Controller {
 
 		else:
 			Set_msg(alert_red('Faça o cadastro primeiro'));
+			redirect('consulta');
+		endif;
+	}
+
+	public function Success()
+	{
+		$dados['titulo'] = 'Sucesso!';
+
+		if($this->session->userdata('checked') == TRUE):
+			//$this->session->unset_userdata('checked');
+			//$this->session->unset_userdata('user_nome');
+			$this->load->view('success', $dados);
+		else:
 			redirect('consulta');
 		endif;
 	}

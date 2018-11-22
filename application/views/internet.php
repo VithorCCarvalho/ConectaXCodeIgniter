@@ -53,7 +53,7 @@
 								<img style="width: 100px; padding-top: 10px;" src="<?php echo base_url('assets/images/icons/logo-colecao-oi-oi-play.png'); ?>">
 							</li>
 						</ul>
-						<a href="produto.php?plano=oiplaybasico" class="btn btn-primary btn-sm">Aderir</a>
+						<a href="<?php echo base_url('consulta') ?>?plano=Oi Play Basico" class="btn btn-primary btn-sm">Aderir</a>
 					</div>
 				</div>
 				<div class="col-md-4">
@@ -72,10 +72,10 @@
 								<img style="width: 85px; margin: 0 5px" src="<?php echo base_url('assets/images/icons/logo-colecao-oi-oi-play.png'); ?>">
 								<img style="width: 70px; margin: 0 5px" src="<?php echo base_url('assets/images/icons/espn.png'); ?>">
 								<img style="width: 70px; margin: 0 5px" src="<?php echo base_url('assets/images/icons/discovery-kids.png'); ?>">
-								<img style="width: 80px; margin: 0 5px" src="<?php echo base_url('assets/images/icons/crackle.png"'); ?>>
+								<img style="width: 80px; margin: 0 5px" src="<?php echo base_url('assets/images/icons/crackle.png"'); ?>">
 							</li>
 						</ul>
-						<a href="produto.php?plano=oiplayintermediario" class="btn btn-primary btn-sm">Aderir</a>
+						<a href="<?php echo base_url('consulta') ?>?plano=Oi Play Intermediário" class="btn btn-primary btn-sm">Aderir</a>
 					</div>
 				</div>
 				<div class="col-md-4">
@@ -94,7 +94,7 @@
 								<img style="width: 30px; margin: 0 5px" src="<?php echo base_url('assets/images/icons/fox-app-traco.png'); ?>">
 							</li>
 						</ul>
-						<a href="produto.php?plano=oiplaytop" class="btn btn-primary btn-sm">Aderir</a>
+						<a href="<?php echo base_url('consulta') ?>?plano=Oi Play Top" class="btn btn-primary btn-sm">Aderir</a>
 					</div>
 				</div>
 			</div>

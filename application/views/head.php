@@ -23,6 +23,28 @@
     <!-- Icomoon Icon Fonts-->
     <link rel="stylesheet" href="<?php echo base_url('assets/css/icomoon.css'); ?>">
     <!-- Themify Icons-->
+    <style type="text/css">
+    @font-face {
+        font-family: 'themify';
+        src:url('<?php echo base_url('assets') ?>/fonts/themify-icons/themify.eot?-fvbane');
+        src:url('<?php echo base_url('assets') ?>/fonts/themify-icons/themify.eot?#iefix-fvbane') format('embedded-opentype'),
+            url('<?php echo base_url('assets') ?>/fonts/themify-icons/themify.woff?-fvbane') format('woff'),
+            url('<?php echo base_url('assets') ?>/fonts/themify-icons/themify.ttf?-fvbane') format('truetype'),
+            url('<?php echo base_url('assets') ?>/fonts/themify-icons/themify.svg?-fvbane#themify') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+      font-family: 'icomoon';
+      src:  url('<?php echo base_url('assets') ?>/fonts/icomoon/icomoon.eot?6iuir');
+      src:  url('<?php echo base_url('assets') ?>/fonts/icomoon/icomoon.eot?6iuir#iefix') format('embedded-opentype'),
+            url('<?php echo base_url('assets') ?>/fonts/icomoon/icomoon.ttf?6iuir') format('truetype'),
+            url('<?php echo base_url('assets') ?>/fonts/icomoon/icomoon.woff?6iuir') format('woff'),
+            url('<?php echo base_url('assets') ?>/fonts/icomoon/icomoon.svg?6iuir#icomoon') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }    
+    </style>
     <link rel="stylesheet" href="<?php echo base_url('assets/css/themify-icons.css'); ?>">
     <!-- Bootstrap  -->
     <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.css'); ?>">

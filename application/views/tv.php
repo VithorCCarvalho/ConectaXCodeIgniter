@@ -47,7 +47,7 @@
 							<li><div class="pricing-info-icon"><img width="26" src="<?php echo base_url('assets/images/icons/internet-celular.svg'); ?>"></div>OI WIFI Fora de casa</li>
 							<li><div class="pricing-info-icon"><img width="34" src="<?php echo base_url('assets/images/icons/icon-oiplay.svg'); ?>"></div>Coleção OI</li>
 						</ul>
-						<a href="produto.php" class="btn btn-primary btn-sm">Aderir</a>
+						<a href="<?php echo base_url('consulta') ?>?plano=Residencial Basico" class="btn btn-primary btn-sm">Aderir</a>
 						<hr>
 						<a href="#">Ver Grade</a>
 					</div>
@@ -65,7 +65,7 @@
 							<li><div class="pricing-info-icon"><img width="26" src="<?php echo base_url('assets/images/icons/internet-celular.svg'); ?>"></div>OI WIFI Fora de casa</li>
 							<li><div class="pricing-info-icon"><img width="30" src="<?php echo base_url('assets/images/icons/tv.svg'); ?>"></div>1 ponto pdicional prátis</li>
 						</ul>
-						<a href="produto.php" class="btn btn-primary btn-sm">Aderir</a>
+						<a href="<?php echo base_url('consulta') ?>?plano=Residencial Intermediario" class="btn btn-primary btn-sm">Aderir</a>
 						<hr>
 						<a href="#">Ver Grade</a>
 					</div>
@@ -82,7 +82,7 @@
 							<li><div class="pricing-info-icon"><img width="32" src="<?php echo base_url('assets/images/icons/fixo.svg'); ?>"></div>Telefone Fixo Ilimitado</li>
 							<li><div class="pricing-info-icon"><img width="30" src="<?php echo base_url('assets/images/icons/tv.svg'); ?>"></div>1 ponto adicional prátis</li>
 						</ul>
-						<a href="produto.php" class="btn btn-primary btn-sm">Aderir</a>
+						<a href="<?php echo base_url('consulta') ?>?plano=Residencial Top" class="btn btn-primary btn-sm">Aderir</a>
 						<hr>
 						<a href="#">Ver Grade</a>
 					</div>

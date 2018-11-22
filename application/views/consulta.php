@@ -63,6 +63,7 @@
 							</select>
 						</div>
 					</div>
+					<input type="hidden" name="servico_plano" value="<?php echo @$_GET['plano'] ?>">
 			  		<button type="submit" class="btn btn-primary">Consultar</button>
 				<?php echo form_close(); ?>
 			</div>

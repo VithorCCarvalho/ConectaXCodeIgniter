@@ -93,7 +93,8 @@
 	                                                    </div>
 	                                                    <div class="col-sm-6">
 	                                                        <ul class="list-unstyled navbar__list">
-	                                                           
+	                                                           	<li><strong>PLANO: </strong>
+	                                                            <input type="text" class="form-control" name="servico_plano" placeholder="Editar..." value="<?php echo $value->servico_plano; ?>"></li>
 	                                                            <li><strong>RG: </strong>
 	                                                            <input type="text" class="form-control" name="user_rg" placeholder="Editar..." value="<?php echo $value->user_rg; ?>"></li>
 	                                                            <li><strong>DATA DE NASCIMENTO: </strong>

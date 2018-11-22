@@ -10,23 +10,29 @@
     
     <?php $this->load->view('nav'); ?>
     
-    <header id="gtco-header" class="gtco-cover" role="banner" style="background-image: url(<?php echo base_url('assets/images/') ?>family-watching.jpg)">
+    <header id="gtco-header" class="gtco-cover" role="banner" style="background-image: url(<?php echo base_url('assets/images/') ?>family-watching3.jpg)">
         <div class="overlay"></div>
         <div class="gtco-container">
             <div class="row">
                 <div class="col-md-12 col-md-offset-0 text-left">
                     <div class="row row-mt-15em">
                         <div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
-                            <span style="margin: -45px 0 20px 0px" class="intro-text-small">Bem vindo à ConectaX</span>
-                            <h1 style="margin: -10px 0">Os melhores planos de Internet e TV do Brasil.</h1> 
+                            <div class="col-sm-10 plano-apresentacao">
+                                <span style="margin: -45px 0 20px 0px" class="intro-text-small">Bem vindo à ConectaX</span>
+                                <h1 style="margin: -10px 0">
+                                    <span style="color: rgb(255, 215, 0)">168 CANAIS DE TV</span><br>
+                                    <span>35 MEGA DE INTERNET</span><br>
+                                    <span style="color: rgb(255, 215, 0)">MUITO CONTEÚDO E DIVERSÃO</span>
+                                </h1> 
+                            </div>
                         </div>
                         
                         <div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
                             <div class="form-wrap">
                                 <div class="tab">
-                                    <ul class="tab-menu">
+                                    <!--<ul class="tab-menu">
                                         <li class="active gtco-first"><a href="#" data-tab="signup">Faça sua consulta</a></li>
-                                    </ul>
+                                    </ul>-->
                                     <div class="tab-content">
                                         <div class="tab-content-inner active" data-content="signup">
                                             <form action="<?php echo base_url('consulta'); ?>" method="post">
@@ -70,62 +76,13 @@
             </div>
         </div>
     </header>
-
-    <div class="gtco-section border-bottom">
-        <div class="gtco-container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-                    <h2>Conheça as modalidades de planos</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="<?php echo base_url('assets/images/img_2.jpg') ?>') ?>" class="fh5co-project-item image-popup">
-                        <figure>
-                            <div class="overlay"><i class="ti-plus"></i></div>
-                            <img src="<?php echo base_url('assets/images/internet.jpeg') ?>" alt="Image" class="img-responsive">
-                        </figure>
-                        <div class="fh5co-text">
-                            <h2>OI TOTAL PLAY</h2>
-                            <p>Internet de alta velocidade e milhares de filmes e séries com o Coleção OI</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="<?php echo base_url('assets/images/img_3.jpg') ?>" class="fh5co-project-item image-popup">
-                        <figure>
-                            <div class="overlay"><i class="ti-plus"></i></div>
-                            <img src="<?php echo base_url('assets/images/tv.jpg') ?>" alt="Image" class="img-responsive">
-                        </figure>
-                        <div class="fh5co-text">
-                            <h2>OI TV RESIDENCIAL</h2>
-                            <p>Diversos canais de filmes e séries para se divertir com a familia</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="<?php echo base_url('assets/images/img_4.jpg') ?>" class="fh5co-project-item image-popup">
-                        <figure>
-                            <div class="overlay"><i class="ti-plus"></i></div>
-                            <img src="<?php echo base_url('assets/images/celular.jpg') ?>" alt="Image" class="img-responsive">
-                        </figure>
-                        <div class="fh5co-text">
-                            <h2>OI TOTAL CONECTADO</h2>
-                            <p>Internet dentro e fora de casa com ligações ilimitadas para todo o Brasil</p>
-                        </div>
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </div>
     
     <div class="gtco-section border-bottom">
         <div class="gtco-container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-                    <h2>Oi Total Play</h2>
-                    <p>Internet de alta velocidade e milhares de filmes e séries com o Coleção OI</p>
+                    <h2>Confira alguns planos</h2>
+                    <p>Internet de alta velocidade e canais de TV com muita diversão</p>
                 </div>
             </div>
             <div class="row">
@@ -144,9 +101,9 @@
                                 <img style="width: 100px; padding-top: 10px;" src="<?php echo base_url('assets/images/icons/logo-colecao-oi-oi-play.png') ?>">
                             </li>
                         </ul>
-                        <a href="produto.php" class="btn btn-primary btn-sm">Consultar</a>
+                        <a href="<?php echo base_url('consulta')?>?plano=Oi Total Play" class="btn btn-primary btn-sm">Consultar</a>
                         <hr>
-                        <a href="totalplay.php">Veja os planos</a>
+                        <a href="<?php echo base_url('internet')?>">Veja os planos</a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -162,9 +119,9 @@
                             <li><div class="pricing-info-icon"><img width="26" src="<?php echo base_url('assets/images/icons/internet-celular.svg') ?>"></div>OI WIFI Fora de casa</li>
                             <li><div class="pricing-info-icon"><img width="30" src="<?php echo base_url('assets/images/icons/tv.svg') ?>"></div>1 ponto adicional prátis</li>
                         </ul>
-                        <a href="produto.php?plano=oiresidencialintermediario" class="btn btn-primary btn-sm">Consultar</a>
+                        <a href="<?php echo base_url('consulta')?>?plano=Oi Total Residencial" class="btn btn-primary btn-sm">Consultar</a>
                         <hr>
-                        <a href="totalresidencial.php">Veja os planos</a>
+                        <a href="<?php echo base_url('tv')?>">Veja os planos</a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -182,7 +139,7 @@
                                 <img style="width: 100px; padding-top: 10px;" src="<?php echo base_url('assets/images/icons/logo-colecao-oi-oi-play.png') ?>">
                             </li>
                         </ul>
-                        <a href="produto.php" class="btn btn-primary btn-sm">Consultar</a>
+                        <a href="<?php echo base_url('consulta')?>?plano=Oi Conectado Light" class="btn btn-primary btn-sm">Consultar</a>
                     </div>
                 </div>
             </div>
@@ -271,7 +228,6 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
                     <h2>Veja algumas vantagens</h2>
-                    <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
                 </div>
             </div>
 

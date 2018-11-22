@@ -11,7 +11,7 @@
 	<div class="contentconsulta">
 		<div class="boxleftconsulta">
 			<div class="boxleftformulario">
-				<h2>Parabéns <?php echo $this->session->userdata('user_nome'); ?>Joao Vithor Coelho</h2>
+				<h2>Parabéns <?php echo $this->session->userdata('user_nome'); ?></h2>
 				<h3>Logo entraremos em contato</h3>
 			</div>
 		</div>

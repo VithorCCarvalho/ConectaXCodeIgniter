@@ -4510,6 +4510,7 @@ section {
     -moz-border-radius-bottomleft: 3px;
     border-bottom-left-radius: 3px;
     vertical-align: top;
+    padding: 18px 0px 0px 30px;
 }
 
 .table-data2.table tbody tr td:first-child .au-checkbox {
@@ -4540,7 +4541,7 @@ section {
     font-size: 14px;
     color: #808080;
     vertical-align: middle;
-    padding: 15px 10px;
+    padding: 15px 0px;
     padding-right: 10px;
     border: none;
 }

@@ -26,6 +26,7 @@ class RegisterCliente extends CI_Controller {
 			$this->form_validation->set_rules('user_numero', 'numero', 'trim|required');
 			$this->form_validation->set_rules('user_nascimento', 'nascimento', 'trim|required');
 			$this->form_validation->set_rules('user_cidade', 'cidade', 'trim|required');
+			$this->form_validation->set_rules('servico_plano', 'plano', 'trim');
 
 			if($this->form_validation->run() == FALSE)
 			{
@@ -119,11 +120,12 @@ class RegisterCliente extends CI_Controller {
 		$dados['titulo'] = 'Sucesso!';
 
 		if($this->session->userdata('checked') == TRUE):
-			//$this->session->unset_userdata('checked');
-			//$this->session->unset_userdata('user_nome');
 			$this->load->view('success', $dados);
 		else:
 			redirect('consulta');
 		endif;
+
+		$this->session->unset_userdata('checked');
+		$this->session->unset_userdata('user_nome');
 	}
 }

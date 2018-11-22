@@ -110,7 +110,7 @@ h1, h2, h3, h4, h5, h6, figure {
   margin: 0;
   padding: 0;
   width: 100%;
-  padding: 20px 0;
+  padding: 40px 0;
   z-index: 1001;
 }
 @media screen and (max-width: 768px) {
@@ -148,9 +148,9 @@ h1, h2, h3, h4, h5, h6, figure {
   display: inline;
 }
 .gtco-nav ul li a {
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 400;
   padding: 30px 10px;
-  color: rgba(255, 255, 255, 0.7);
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -362,8 +362,7 @@ h1, h2, h3, h4, h5, h6, figure {
   clear: both;
   background: #fff;
   padding: 30px;
-  border-bottom-left-radius: 7px;
-  border-bottom-right-radius: 7px;
+  border-radius: 5px;
 }
 #gtco-header .form-wrap .tab-content .tab-content-inner {
   display: none;
@@ -371,7 +370,12 @@ h1, h2, h3, h4, h5, h6, figure {
 #gtco-header .form-wrap .tab-content .tab-content-inner.active {
   display: block;
 }
-
+.plano-apresentacao h1{
+  font-size: 45px !important;
+  text-transform: uppercase;
+  letter-spacing: -3px;
+  font-weight: 700 !important;
+}
 #gtco-header,
 #gtco-counter,
 .gtco-bg {
@@ -450,7 +454,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .gtco-cover {
-  height: 850px;
+  height: 775px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -746,7 +750,7 @@ form label {
 #gtco-subscribe,
 #gtco-footer,
 .gtco-section {
-  padding: 3em 0;
+  padding: 6em 0;
   clear: both;
   position: relative;
       border-top: 1px solid #e6e5e5;
@@ -1293,6 +1297,7 @@ form label {
   color: #000;
   border: none;
   font-size: 15px;
+  font-weight: 400;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   background: #cfea00 !important;

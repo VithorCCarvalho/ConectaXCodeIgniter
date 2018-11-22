@@ -78,7 +78,7 @@
     </header>
     
     <div class="gtco-section border-bottom">
-        <div class="gtco-container">
+        <div class="gtco-container" style="padding-top: 50px">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
                     <h2>Confira alguns planos</h2>

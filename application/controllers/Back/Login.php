@@ -12,7 +12,7 @@ class Login extends CI_Controller {
 		$this->load->model('option_model', 'option');
 	}
 
-	public function login()
+	public function Login()
 	{
 		if($this->option->Get_option('setup_executado') != 1)
 		{
@@ -41,7 +41,6 @@ class Login extends CI_Controller {
 				if(password_verify($dados_form['senha'], $this->option->Get_option('user_pass')))
 				{
 					$this->session->set_userdata('logged', TRUE);
-					$this->session->set_userdata('admin_login', $dados_form['login']);
 					$this->session->set_userdata('admin_nome', $this->option->Get_option('user_nome'));
 					$this->session->set_userdata('admin_email', $this->option->Get_option('user_email'));
 

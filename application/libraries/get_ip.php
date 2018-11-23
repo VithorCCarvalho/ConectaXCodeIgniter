@@ -1,7 +1,7 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class get_ip
+class Get_ip
 {
 	private $ip;
 

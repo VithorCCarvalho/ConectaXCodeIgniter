@@ -1,8 +1,6 @@
-<?php 
-	
-	$message = null;
+<?php
 
-	function ConectaDB($host, $dbname, $user, $pass)
+	function ConnectDatabase($host, $dbname, $user, $pass)
 	{
 		try
 		{
@@ -10,7 +8,7 @@
 
 			if($retorno['connection'])
 			{
-				$retorno['connection'] = true;
+				$retorno['status'] = true;
 				$retorno['message'] = 'Conexão realizada com sucesso';
 
 				return $retorno;

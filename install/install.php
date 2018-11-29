@@ -1,4 +1,4 @@
-<?php 
+<?php
 	require "config.inc.php";
 
 	$c = new PDO("mysql:host={$host};dbname={$dbname}", $user, $pass);

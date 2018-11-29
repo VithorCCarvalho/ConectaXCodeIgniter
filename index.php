@@ -36,10 +36,6 @@
  * @filesource
  */
 
-if(!file_exists('install/config.inc.php')):
-	header("Location: install/index.php");
-endif;
-
 /*
  *---------------------------------------------------------------
  * APPLICATION ENVIRONMENT

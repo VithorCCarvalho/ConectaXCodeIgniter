@@ -1,9 +1,23 @@
-<?php require "connection.php";
+<?php 
+	require "functions.php";
 
-	if($_POST)
-	{
-		$c = ConectaDB($_POST['host'], $_POST['dbname'], $_POST['user'], $_POST['pass']);
-	}
+	if($_POST):
+		$c = ConnectDatabase($_POST['host'], $_POST['dbname'], $_POST['user'], $_POST['pass']);
+
+		if($c['status']):
+			$texto =
+			'
+				$host = \'' . $_POST['host'] . '\';
+				$dbname = \'' . $_POST['dbname'] . '\';
+				$user = \'' . $_POST['user'] . '\';
+				$pass = \''. $_POST['pass'] . '\';
+			';
+
+			file_put_contents('config.inc.php', $texto);
+			file_put_contents('../application/config/config.inc.php', $texto);
+
+		endif;
+	endif;
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +30,7 @@
 <body>
 	<div class="col-sm-4"></div>
 	<div class="col-sm-4 container">
-		<h1>Instalação do Sistema</h1>
+		<h1>Configuração do banco de dados</h1>
 		<p><?php echo @$c['message']; ?></p>
 		<hr>
 		<form method="post" action="">
@@ -32,23 +46,3 @@
 	</div>
 </body>
 </html>
-
-<?php
-
-if($_POST AND @$c['connection'] == true):
-
-$texto =
-
-'<?php
-
-	$host = \'' . $_POST['host'] . '\';
-	$dbname = \'' . $_POST['dbname'] . '\';
-	$user = \'' . $_POST['user'] . '\';
-	$pass = \''. $_POST['pass'] . '\';
-
-';
-
-file_put_contents('config.inc.php', $texto);
-file_put_contents('../application/config/config.inc.php', $texto);
-
-endif;

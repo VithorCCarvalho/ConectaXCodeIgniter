@@ -55,6 +55,8 @@
 	{
 		echo '<h1>Erro ao carregar</h1>';
 		echo '<p>Você deve excluir a pasta install</p>';
+
+		exit;
 	}
 
 /*

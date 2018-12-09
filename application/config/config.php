@@ -1,11 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-if(file_exists('config.inc.php'))
-{
-	require 'config.inc.php';
-}
-
+include 'config.inc.php';
 
 $config['base_url'] = $urlbase;
 

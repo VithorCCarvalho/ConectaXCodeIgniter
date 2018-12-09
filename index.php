@@ -36,6 +36,27 @@
  * @filesource
  */
 
+
+/*
+*--------------------------
+* VERIFICA INSTALAÇÃO
+*--------------------------
+* Verifica se existe os arquivos 'config.inc.php' e 'database.inc.php' na pasta application/config/
+* a partir do procedimento de instalçao
+* Verifica se existe a pasta install
+* Verifica se existe usuário administrador
+*/
+
+	if (!file_exists('application/config/config.inc.php') && !file_exists('application/config/database.inc.php'))
+	{
+		header('Location: install/index.php');
+	}
+	elseif(is_dir('install'))
+	{
+		echo '<h1>Erro ao carregar</h1>';
+		echo '<p>Você deve excluir a pasta install</p>';
+	}
+
 /*
  *---------------------------------------------------------------
  * APPLICATION ENVIRONMENT
